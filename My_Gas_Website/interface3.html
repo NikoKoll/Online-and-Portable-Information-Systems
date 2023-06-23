@@ -6,16 +6,32 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
 </head>
-    <header>
+    <header style="background-color: #333; display: inline-block;">
         <!-- Κοινό Navigation bar Menu -->
+        <div id="menuToggle">
+            <input id="checkbox" type="checkbox" onclick="menuT()">
+            <label class="toggle" for="checkbox">
+                <div class="bar bar--top"></div>
+                <div class="bar bar--middle"></div>
+                <div class="bar bar--bottom"></div>
+            </label>
+            <script>
+                function menuT(){
+                    document.querySelector('.menuList').classList.toggle('open');
+                    document.querySelector('.menuOpen').classList.toggle('open');
+                }
+            </script>
+        </div>
         <nav>
-            <ul>
-                <li><a href="interface1.html">Αρχική</a></li>
-                <li><a href="interface2.html">Προφίλ Εταιρίας</a></li>
-                <li><a href="interface3.html">Υπολογισμός Φυσικού Αερίου</a></li>
-                <li><a href="interface4.html">Επικοινωνία</a></li>
-                <li><a href="interface5.php">Συνδεση Διαχιριστη</a></li>
-            </ul>
+            <div class="menu">
+                <ul class="menuList">
+                    <li><a href="interface1.html">Αρχική</a></li>
+                    <li><a href="interface2.html">Προφίλ Εταιρίας</a></li>
+                    <li><a href="interface3.html">Υπολογισμός Φυσικού Αερίου</a></li>
+                    <li><a href="interface4.html">Επικοινωνία</a></li>
+                    <li><a href="interface5.php">Συνδεση Διαχιριστη</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -103,7 +119,7 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15855.040011309693!2dLONGITUDE!3dLATITUDE!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDM1JzUwLjUiTiAzMcKwNTEnMzcuNiJF!5e0!3m2!1sen!2sus!4v1621336520785!5m2!1sen!2sus" style="border:0;" allowfullscreen loading="lazy" ></iframe>
                 </div>
             </div>
-            <p>&copy; 2023 Όνομα Εταιρίας. Όλα τα δικαιώματα κατοχυρωμένα.</p>
+            <p>&copy; 2023 My Gas. Όλα τα δικαιώματα κατοχυρωμένα.</p>
         </footer>
     </body>
     <style>

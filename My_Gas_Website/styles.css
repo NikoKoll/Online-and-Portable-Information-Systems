@@ -15,6 +15,7 @@ body {
     margin-left: 35px;
     margin-right: auto;
     margin-top: 25px;
+    display: none;
 }
 
 .toggle{
@@ -29,7 +30,6 @@ body {
     position: relative;
     width: 40px;
     cursor: pointer;
-    margin: auto;
     display: block;
     height: calc(4px * 3 + 11px * 2);
   }
@@ -40,7 +40,7 @@ body {
     right: 0;
     height: 4px;
     border-radius: calc(4px / 2);
-    background: #333;
+    background: #f1f1f1;
     color: inherit;
     opacity: 1;
     transition: none 0.35s cubic-bezier(.5,-0.35,.35,1.5) 0s;
@@ -175,6 +175,8 @@ p {
     margin-left: 5px;
     display: flex;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid-columns {
@@ -288,6 +290,7 @@ nav ul li a {
     margin-top: 20px;
     background-color: #D3D3D3;
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
 }
@@ -295,15 +298,12 @@ nav ul li a {
 
 .image_gallery img{
     border-radius: 25px;
-    width: 300px;
+    width: 98%;
     height: 200px;
-    margin-left: 5px;
-    display: flex;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin: 3px;
+    align-items: center;
+    max-width: 100%;
 }
 
 .energy_saving_tips{
@@ -431,13 +431,26 @@ input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:fo
 /* Tablet styles */
 @media screen and (max-width: 1100px) and (min-width: 780px) {
     /* Additional styles for tablet view */
+
+    #menuToggle{
+        display: block;
+        width: 50px;
+        margin-bottom: 20px;
+    }
+
     .collums {
         grid-template-columns: repeat(1, 1fr);
         font-size: small;
     }
 
-    .menu{
-        display:list-item;
+    .menu ul{
+        /* display:grid; */
+        display: none;
+        width: 320px;
+    }
+
+    .menuList.open{
+        display: grid;
     }
 
     .about_us2{
@@ -449,7 +462,7 @@ input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:fo
     .team {
 
         grid-template-columns: repeat(2, 1fr);
-        font-size:x-small ;
+        font-size: small ;
 
     }
     .about_us{
@@ -469,8 +482,18 @@ input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:fo
         grid-template-columns: repeat(2, 1fr);
         font-size: small;
     }
+    .our_programs img{
+        margin-left: auto;
+        margin-right: auto;
+    }
     .image_gallery{
         grid-template-columns: repeat(2, 1fr);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .image_gallery img{
+        width: 300px;
+        height: 200px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -479,9 +502,25 @@ input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:fo
 /* Mobile styles */
 @media screen and (max-width: 780px) {
     /* Additional styles for mobile view */
+    #menuToggle{
+        display: block;
+        width: 50px;
+        margin-bottom: 20px;
+    }
+
     .collums {
         grid-template-columns: repeat(1, 1fr);
         font-size: small;
+    }
+
+    .menu ul{
+        /* display:grid; */
+        display: none;
+        width: 320px;
+    }
+
+    .menuList.open{
+        display: grid;
     }
     .about_us2{
 
@@ -491,7 +530,7 @@ input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:fo
     .team {
 
         grid-template-columns: repeat(2, 1fr);
-        font-size:x-small ;
+        font-size: small ;
     }
     .about_us{
 
@@ -510,8 +549,18 @@ input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:fo
         grid-template-columns: repeat(2, 1fr);
         font-size: small;
     }
+    .our_programs img{
+        margin-left: auto;
+        margin-right: auto;
+    }
     .image_gallery{
         grid-template-columns: repeat(1, 1fr);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .image_gallery img{
+        width: 300px;
+        height: 200px;
         margin-left: auto;
         margin-right: auto;
     }
